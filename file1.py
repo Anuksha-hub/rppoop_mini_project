@@ -4,6 +4,7 @@ import tempfile
 import io
 import re
 # Function to upload a CSV file
+# adding 1 comment
 def upload_csv():
     st.sidebar.markdown("### Upload CSV File")
     uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
