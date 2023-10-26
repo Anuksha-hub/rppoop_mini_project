@@ -6,17 +6,7 @@ import io
 import re
 import base64
 # Function to filter the data based on the search criteria
-def upload_csv():
-    st.sidebar.markdown("### Upload CSV File")
-    uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
-    if uploaded_file is not None:
-        try:
-            df = pd.read_csv(uploaded_file)
-            st.success("CSV file uploaded successfully!")
-            return df
-        except Exception as e:
-            st.error(f"Error uploading CSV file: {str(e)}")
-    return None
+
 def filter_data():
     search_criteria = st.text_input("Enter search criteria:")
     filter_button = st.button("Filter 📊")
@@ -73,7 +63,7 @@ def filter_data():
 def display_data(filtered_df):
     st.dataframe(filtered_df)
 
-    # Show count
+    # Show total count
     st.markdown("Total Entries: {}".format(len(filtered_df)))
 
 # Function to save the filtered data as an Excel file
@@ -110,6 +100,6 @@ st.markdown("Criteria- Course, Category, Division, Cgpa")
 gif=Image.open("C:\\Users\\Sanjogta Koul\\Desktop\\RRPOOP\\stats.gif")
 st.image(gif, width=90)
 
-
+#Filter data
 # Filter data
 filter_data()
