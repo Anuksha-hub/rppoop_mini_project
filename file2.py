@@ -62,7 +62,7 @@ def filter_data():
 def display_data(filtered_df):
     st.dataframe(filtered_df)
 
-    # Show count
+    # Show total count
     st.markdown("Total Entries: {}".format(len(filtered_df)))
 
 # Function to save the filtered data as an Excel file
@@ -99,6 +99,6 @@ st.markdown("Criteria- Course, Category, Division, Cgpa")
 gif=Image.open("C:\\Users\\Sanjogta Koul\\Desktop\\RRPOOP\\stats.gif")
 st.image(gif, width=90)
 
-
+#Filter data
 # Filter data
 filter_data()
