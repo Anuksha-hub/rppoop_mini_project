@@ -6,7 +6,6 @@ import io
 import re
 import base64
 # Function to filter the data based on the search criteria
-
 def filter_data():
     search_criteria = st.text_input("Enter search criteria:")
     filter_button = st.button("Filter 📊")
