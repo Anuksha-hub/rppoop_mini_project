@@ -5,7 +5,17 @@ import io
 import re
 # Function to upload a CSV file
 # Anagha adding a function
-
+def upload_csv():
+    st.sidebar.markdown("### Upload CSV File")
+    uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
+    if uploaded_file is not None:
+        try:
+            df = pd.read_csv(uploaded_file)
+            st.success("CSV file uploaded successfully!")
+            return df
+        except Exception as e:
+            st.error(f"Error uploading CSV file: {str(e)}")
+    return None
 # Function to filter the data based on the search criteria
 def filter_data(df):
     search_criteria = st.text_input("Enter search criteria:")
