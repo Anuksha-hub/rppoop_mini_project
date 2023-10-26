@@ -6,17 +6,7 @@ import io
 import re
 import base64
 # Function to filter the data based on the search criteria
-def upload_csv():
-    st.sidebar.markdown("### Upload CSV File")
-    uploaded_file = st.sidebar.file_uploader("Choose a CSV file", type=["csv"])
-    if uploaded_file is not None:
-        try:
-            df = pd.read_csv(uploaded_file)
-            st.success("CSV file uploaded successfully!")
-            return df
-        except Exception as e:
-            st.error(f"Error uploading CSV file: {str(e)}")
-    return None
+
 def filter_data():
     search_criteria = st.text_input("Enter search criteria:")
     filter_button = st.button("Filter 📊")
